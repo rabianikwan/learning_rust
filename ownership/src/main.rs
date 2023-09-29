@@ -19,4 +19,26 @@ fn main() {
 	let string_moved = string_original;
 	let string_copy = string_moved.clone();
 	println!("string original move the ownership to string_moved: {}, then string copy clone it {}", string_moved, string_copy);
+	
+	let s: String = String::from("Hello");
+	takes_ownership(s); // s values move to function
+	
+	let number = 5;
+	makes_copy(number); // number value copy to function
+	println!("{}", number); // number still can be used because of copy
+	
+	let string2 = String::from("is it moved");
+	let string3: String = take_and_giveback(string2);
+	println!("{}", string3); // it also moved except we use clone() function
+}
+
+fn take_and_giveback(string: String) -> String {
+	string
+}
+fn takes_ownership(some_string: String) {
+	println!("{}", some_string);
+}
+
+fn makes_copy(some_integer: i32) {
+	println!("{}", some_integer);
 }

@@ -11,7 +11,7 @@ fn main() {
 	
 	// copy trait is for a integer, array, and tuple with no string in the reference
 	let x = 5;
-	let y = x;
+	let y = x; 
 	println!("x: {} have been copy by y: {}", x, y);
 	
 	// move trait is happen in string, the value is moved and original variable cannot be used anymore

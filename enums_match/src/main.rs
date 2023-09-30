@@ -32,7 +32,7 @@ fn main() {
     message.call();
     
     let x = 5;
-    let y: Option<i8> = Some(5);
-    let z = x + y.unwrap();
+    let y = 5;
+    let z = x + y;
     println!("{}", z)
 }
